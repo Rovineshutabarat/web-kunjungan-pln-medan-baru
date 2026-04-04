@@ -32,6 +32,7 @@
                             @enderror
                         </div>
 
+
                         <div class="col-span-2 md:col-span-1">
                             <label class="block text-sm font-medium text-gray-700 mb-2">
                                 <i class="fas fa-id-card text-gray-500 mr-2"></i>NIK <span class="text-red-500">*</span>
@@ -81,7 +82,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="p-8 border-b border-gray-100 bg-gradient-to-br from-gray-50/50 to-white">
                 <h3 class="text-xl font-semibold text-gray-800 mb-4">Dokumen Pendukung</h3>
 

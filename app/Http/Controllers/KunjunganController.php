@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use App\Models\Kunjungan;
 use App\Models\Visit;
 use Illuminate\Support\Facades\Storage;
 
@@ -20,7 +19,7 @@ class KunjunganController extends Controller
         return view('kunjungan.index', compact('kunjungans'));
     }
 
-    /**
+    /** 
      * Menampilkan form tambah data kunjungan
      */
     public function create()
@@ -42,6 +41,7 @@ class KunjunganController extends Controller
         if (!Session::get('petugas_login')) {
             return redirect('/login-petugas');
         }
+
 
         $request->validate([
             'id_pelanggan' => 'required|unique:kunjungan,id_pelanggan',
