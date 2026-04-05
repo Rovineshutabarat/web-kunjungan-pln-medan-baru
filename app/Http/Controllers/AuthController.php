@@ -24,15 +24,15 @@ class AuthController extends Controller
 
         $request->validate([
             'username' => 'required|string|max:50',
-            'email'    => 'required|email|unique:users,email',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
         ]);
 
         User::create([
             'username' => $request->username,
-            'email'    => $request->email,
+            'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role'     => 'officer',
+            'role' => 'user',
         ]);
 
         return redirect()->route('auth.login');
@@ -41,7 +41,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email'    => 'required|email',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 

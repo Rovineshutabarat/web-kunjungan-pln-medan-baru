@@ -16,7 +16,6 @@ class RoleMiddleware
             return redirect('/login');
         }
 
-        // Split roles dari string 'admin|officer' menjadi array
         $allowedRoles = explode('|', $roles);
 
         if (!in_array(Auth::user()->role, $allowedRoles)) {

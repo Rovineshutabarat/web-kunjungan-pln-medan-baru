@@ -13,18 +13,16 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'username' => 'admin',
-                'nama' => 'Administrator',
-                'password' => 'admin123', // Password plain text
-                'created_at' => now(),
-                'updated_at' => now(),
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make("admin123"),
+                'role' => 'admin',
             ],
             [
                 'username' => 'petugas',
-                'nama' => 'Petugas 1',
-                'password' => 'petugas123',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]
+                'email' => 'petugas@gmail.com',
+                'password' => Hash::make("petugas123"),
+                'role' => 'officer',
+            ],
         ]);
     }
 }
